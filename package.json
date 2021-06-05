@@ -15,7 +15,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "docs:build": "compodoc -p --tsconfig ./projects/ng-smart-lib/tsconfig.lib.json -n ./projects/ng-smart-lib -d docs --hideGenerator --theme material",
-    "publish:demo": "npx  angular-cli-ghpages --repo=https://$ACCESS_TOKEN@github.com/divyanshgupta/Angular_ng-smart-lib.git --name=Divyansh Gupta --email=divyansh.2392@gmail.com --branch gh-pages --dir=./dist/ng-smart-lib-showcase",
+    "publish:demo": "npx  angular-cli-ghpages -S --repo=https://$ACCESS_TOKEN@github.com/divyanshgupta/Angular_ng-smart-lib.git --name=Divyansh Gupta --email=divyansh.2392@gmail.com --branch gh-pages --dir=./dist/ng-smart-lib-showcase",
     "e2e": "ng e2e",
     "prepare": "husky install",
     "copy:demo:ci": "cp -R dist/ng-smart-lib-showcase ./docs/demo",
