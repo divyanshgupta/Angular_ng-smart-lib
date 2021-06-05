@@ -13,8 +13,8 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 10.24
-      - name: Install dependencies
-        run: npm install🔧
+      - name: Install dependencies🔧
+        run: npm install
       - name: Lint
         run: npm run lint
       - name: Build demo
