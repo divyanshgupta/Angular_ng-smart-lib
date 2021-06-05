@@ -33,5 +33,5 @@ jobs:
         run: npm run docs:build
       - name: Copy Files
         run: npm run copy:demo:ci
-      - name: Deploy🚀
+      - name: Deploy Demo🚀
         run: npm run publish:demo
