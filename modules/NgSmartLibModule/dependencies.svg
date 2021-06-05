@@ -24,13 +24,13 @@
 <title>cluster_NgSmartLibModule</title>
 <polygon fill="none" stroke="black" stroke-dasharray="1,5" points="15.5,-70 15.5,-268 480.5,-268 480.5,-70 15.5,-70"/>
 </g>
-<g id="clust6" class="cluster">
-<title>cluster_NgSmartLibModule_exports</title>
-<polygon fill="none" stroke="black" points="88.5,-208 88.5,-260 407.5,-260 407.5,-208 88.5,-208"/>
-</g>
 <g id="clust5" class="cluster">
 <title>cluster_NgSmartLibModule_imports</title>
 <polygon fill="none" stroke="black" points="344.5,-78 344.5,-130 472.5,-130 472.5,-78 344.5,-78"/>
+</g>
+<g id="clust6" class="cluster">
+<title>cluster_NgSmartLibModule_exports</title>
+<polygon fill="none" stroke="black" points="88.5,-208 88.5,-260 407.5,-260 407.5,-208 88.5,-208"/>
 </g>
 <g id="clust2" class="cluster">
 <title>cluster_NgSmartLibModule_declarations</title>
