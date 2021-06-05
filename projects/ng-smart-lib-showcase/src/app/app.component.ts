@@ -16,7 +16,7 @@ export class AppComponent {
   constructor(private alertService: NgAlertService) {}
 
   public createSuccessMessage(): void {
-    // cons
+    console.log('testing');
     this.alertService.createSuccessAlert('Sample success message');
   }
 
