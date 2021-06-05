@@ -6,6 +6,7 @@
     "start": "ng serve",
     "format:check": "prettier --list-different 'projects/**/*.ts'",
     "format:write": "prettier --write 'projects/**/*.ts'",
+    "test:lib-coverage": "ng test ng-smart-lib --code-coverage --watch=false",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
