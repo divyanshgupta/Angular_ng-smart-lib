@@ -18,7 +18,7 @@
     "publish:demo": "npx angular-cli-ghpages --dir=./dist/ng-smart-lib-showcase",
     "e2e": "ng e2e",
     "prepare": "husky install",
-    "copy:demo:ci": "cp -R dist/demo ./docs/demo",
+    "copy:demo:ci": "cp -R dist/ng-smart-lib-showcase ./docs/demo",
     "semantic-release": "semantic-release"
   },
   "private": true,
