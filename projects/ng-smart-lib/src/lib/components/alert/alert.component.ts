@@ -3,13 +3,9 @@ import { merge, Observable, Subject } from 'rxjs';
 import { AlertMessage, NgAlertService } from './ng-alert-service';
 
 @Component({
-  selector: 'ng-alert',
+  selector: 'lib-ng-alert',
   template: `
-    <div
-      class="alert"
-      *ngIf="alertMessage$ | async as alertMessage"
-      [ngStyle]="{ background: alertMessage.color }"
-    >
+    <div class="alert" *ngIf="alertMessage$ | async as alertMessage" [ngStyle]="{ background: alertMessage.color }">
       <span class="closebtn" (click)="closeAlert()">&times;</span>
       <strong>{{ alertMessage.prefix }}!</strong> {{ alertMessage.message }}
     </div>
@@ -22,7 +18,7 @@ export class NgAlertComponent implements OnInit {
 
   constructor(private alertService: NgAlertService) {}
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.alertMessage$ = merge(this.alertService.alertMessage$, this.close$);
   }
 

@@ -4,7 +4,7 @@ import { NgAlertService } from '../../../ng-smart-lib/src/lib/components/alert/n
 @Component({
   selector: 'app-root',
   template: `
-    <ng-alert></ng-alert>
+    <lib-ng-alert></lib-ng-alert>
     <button class="success" (click)="createSuccessMessage()">Create success alert</button>
     <button class="danger" (click)="createDangerMessage()">Create danger alert</button>
     <button class="warning" (click)="createWarningMessage()">Create warning alert</button>
