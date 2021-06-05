@@ -1,6 +1,6 @@
 {
   "name": "ng-smart-lib",
-  "version": "0.0.0",
+  "version": "0.0.0-development",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -16,7 +16,8 @@
     "lint": "ng lint",
     "publish:demo": "npx angular-cli-ghpages --dir=./dist/ng-smart-lib-showcase",
     "e2e": "ng e2e",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "semantic-release": "semantic-release"
   },
   "private": true,
   "dependencies": {
@@ -59,7 +60,8 @@
     "protractor": "~7.0.0",
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
-    "typescript": "~4.0.2"
+    "typescript": "~4.0.2",
+    "semantic-release": "^17.4.3"
   },
   "husky": {
     "hooks": {
@@ -77,5 +79,9 @@
     "extends": [
       "@commitlint/config-conventional"
     ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/divyanshgupta/Angular_ng-smart-lib.git"
   }
 }
