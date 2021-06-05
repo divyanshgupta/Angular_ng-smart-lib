@@ -9,12 +9,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-      - name: Use Node.js 10.24
+      - name: Use Node.js 10.24🛎️
         uses: actions/setup-node@v1
         with:
           node-version: 10.24
       - name: Install dependencies
-        run: npm install
+        run: npm install🔧
       - name: Lint
         run: npm run lint
       - name: Build demo
@@ -23,8 +23,8 @@ jobs:
         run: npm run docs:build
       - name: Copy Files
         run: npm run copy:demo:ci
-      - name: Deploy
-        uses: divyanshgupta/github-pages-deploy-action@releases/v3
+      - name: Deploy🚀
+        uses: JamesIves/github-pages-deploy-action@releases/v3
         with:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           BASE_BRANCH: master
