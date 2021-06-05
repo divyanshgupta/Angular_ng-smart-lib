@@ -11,7 +11,7 @@
     "report-coverage:lib": "./coverage/ng-smart-lib/lcov.info | codecov",
     "build": "npm run build:lib && npm run build:demo",
     "build:lib": "npm run copy:readme && ng build ng-smart-lib",
-    "build:demo": "ng build ng-smart-lib-showcase --base-href=/Angular_ng-smart-lib/demo",
+    "build:demo": "ng build ng-smart-lib-showcase --base-href=/Angular_ng-smart-lib/demo/",
     "test": "ng test",
     "lint": "ng lint",
     "docs:build": "compodoc -p --tsconfig ./projects/ng-smart-lib/tsconfig.lib.json -n ./projects/ng-smart-lib -d docs --hideGenerator --theme material",
