@@ -4,13 +4,19 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "copy:readme": "copyfiles ./README.md ./projects/ng-smart-lib",
     "format:check": "prettier --list-different 'projects/**/*.ts'",
     "format:write": "prettier --write 'projects/**/*.ts'",
     "test:lib-coverage": "ng test ng-smart-lib --code-coverage --watch=false",
-    "build": "ng build",
+    "report-coverage:lib": "./coverage/ng-smart-lib/lcov.info | codecov",
+    "build": "npm run build:lib && npm run build:showcase",
+    "build:lib": "npm run copy:readme && ng build ng-smart-lib",
+    "build:showcase": "ng build ng-smart-lib-showcase --base-href='https://divyanshgupta.github.io/ng-smart-lib/'",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "publish:demo": "npx angular-cli-ghpages --dir=./dist/ng-smart-lib-showcase",
+    "e2e": "ng e2e",
+    "prepare": "husky install"
   },
   "private": true,
   "dependencies": {
@@ -30,10 +36,15 @@
     "@angular-devkit/build-angular": "~0.1001.7",
     "@angular/cli": "~10.1.4",
     "@angular/compiler-cli": "~10.1.4",
+    "@commitlint/cli": "^12.1.4",
+    "@commitlint/config-conventional": "^12.1.4",
+    "@commitlint/prompt": "^12.1.4",
     "@types/jasmine": "~3.5.0",
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "^12.11.1",
+    "codecov": "^3.8.2",
     "codelyzer": "^6.0.0",
+    "copyfiles": "^2.4.1",
     "husky": "^6.0.0",
     "jasmine-core": "~3.6.0",
     "jasmine-spec-reporter": "~5.0.0",
@@ -52,13 +63,19 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
   "lint-staged": {
     "projects/**/*.ts": [
       "prettier --write",
       "git add"
+    ]
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
     ]
   }
 }
