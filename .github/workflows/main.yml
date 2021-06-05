@@ -1,0 +1,32 @@
+name: Build and Deploy
+on:
+  pull_request:
+  push:
+    branches:
+      - master
+jobs:
+  build:
+    runs-on: windows
+    steps:
+      - uses: actions/checkout@v1
+      - name: Use Node.js 10.24
+        uses: actions/setup-node@v1
+        with:
+          node-version: 10.24
+      - name: Install dependencies
+        run: npm install
+      - name: Lint
+        run: npm run lint
+      - name: Build demo
+        run: npm run build:demo
+      - name: Docs
+        run: npm run docs:build
+      - name: Copy Files
+        run: npm run copy:demo:ci
+      - name: Deploy
+        uses: divyanshgupta/github-pages-deploy-action@releases/v3
+        with:
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          BASE_BRANCH: master
+          BRANCH: gh-pages
+          FOLDER: docs
