@@ -16,26 +16,26 @@ export class NgTimerComponent implements OnInit {
   value: number;
   isPaused = true;
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.value = this.init;
     this.start();
   }
 
-  start = () => {
+  start(): void {
     this.isPaused = false;
     this.startTimer();
-  };
+  }
 
-  pause = () => {
+  pause(): void {
     this.isPaused = true;
     this.stopTimer();
-  };
+  }
 
-  stop = () => {
+  stop(): void {
     this.isPaused = true;
     this.value = this.init;
     this.stopTimer();
-  };
+  }
 
   get isStoppable() {
     return this.init !== this.value;
