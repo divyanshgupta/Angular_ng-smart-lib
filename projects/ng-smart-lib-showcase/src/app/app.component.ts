@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
       <ul>
         <li><a href="" routerLink="timer">Timer</a></li>
         <li><a href="" routerLink="alert">Alert</a></li>
+        <li><a href="" routerLink="category-selector">Category Selector</a></li>
       </ul>
     </div>
     <router-outlet></router-outlet>`,
