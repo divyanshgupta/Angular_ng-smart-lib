@@ -83,7 +83,7 @@
                                     <a href="../components/NgAlertComponent.html" >NgAlertComponent</a>
                                 </li>
                                 <li class="link">
-                                    <a href="../components/NgSmartLibComponent.html" >NgSmartLibComponent</a>
+                                    <a href="../components/NgTimerComponent.html" >NgTimerComponent</a>
                                 </li>
                         </ul>
                     </li>
@@ -104,9 +104,6 @@
                             >
                                 <li class="link">
                                     <a href="../injectables/NgAlertService.html" >NgAlertService</a>
-                                </li>
-                                <li class="link">
-                                    <a href="../injectables/NgSmartLibService.html" >NgSmartLibService</a>
                                 </li>
                         </ul>
                     </li>
@@ -207,7 +204,7 @@
                                            <a href="../components/NgAlertComponent.html" >NgAlertComponent</a>
                                        </li>
                                        <li class="link">
-                                           <a href="../components/NgSmartLibComponent.html" >NgSmartLibComponent</a>
+                                           <a href="../components/NgTimerComponent.html" >NgTimerComponent</a>
                                        </li>
                                </ul>
                            </li>
@@ -228,9 +225,6 @@
                    >
                                        <li class="link">
                                            <a href="../injectables/NgAlertService.html" >NgAlertService</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="../injectables/NgSmartLibService.html" >NgSmartLibService</a>
                                        </li>
                                </ul>
                            </li>
@@ -309,10 +303,10 @@
                     <h3>Declarations<a href="https://angular.io/docs/ts/latest/api/core/index/NgModule-interface.html#!#declarations-anchor" target="_blank"><span class="fa fa-info-circle"></span></a></h3>
                     <ul class="list-group">
                             <li class="list-group-item">
-                                <a href="../components/NgSmartLibComponent.html">NgSmartLibComponent</a>
+                                <a href="../components/NgAlertComponent.html">NgAlertComponent</a>
                             </li>
                             <li class="list-group-item">
-                                <a href="../components/NgAlertComponent.html">NgAlertComponent</a>
+                                <a href="../components/NgTimerComponent.html">NgTimerComponent</a>
                             </li>
                     </ul>
                 </div>
@@ -320,10 +314,10 @@
                     <h3>Exports<a href="https://angular.io/docs/ts/latest/api/core/index/NgModule-interface.html#!#exports-anchor" target="_blank"><span class="fa fa-info-circle"></a></h3>
                     <ul class="list-group">
                             <li class="list-group-item">
-                                    <a href="../components/NgSmartLibComponent.html" >NgSmartLibComponent</a>
+                                    <a href="../components/NgAlertComponent.html" >NgAlertComponent</a>
                             </li>
                             <li class="list-group-item">
-                                    <a href="../components/NgAlertComponent.html" >NgAlertComponent</a>
+                                    <a href="../components/NgTimerComponent.html" >NgTimerComponent</a>
                             </li>
                     </ul>
                 </div>
@@ -332,14 +326,14 @@
     </div>
     <div class="tab-pane fade tab-source-code" id="source">
         <pre><code class="hljs javascript">import { NgModule } from &#x27;@angular/core&#x27;;
-import { NgSmartLibComponent } from &#x27;./ng-smart-lib.component&#x27;;
 import { NgAlertComponent } from &#x27;./components/alert/alert.component&#x27;;
 import { CommonModule } from &#x27;@angular/common&#x27;;
+import { NgTimerComponent } from &#x27;./components/timer/timer.component&#x27;;
 
 @NgModule({
-  declarations: [NgSmartLibComponent, NgAlertComponent],
+  declarations: [NgAlertComponent, NgTimerComponent],
   imports: [CommonModule],
-  exports: [NgSmartLibComponent, NgAlertComponent],
+  exports: [NgAlertComponent, NgTimerComponent],
 })
 export class NgSmartLibModule {}
 </code></pre>
