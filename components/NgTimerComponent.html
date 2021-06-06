@@ -364,78 +364,6 @@
                 <tbody>
                     <tr>
                         <td class="col-md-4">
-                            <b> start</b>
-                        </td>
-                    </tr>
-    
-                    <tr>
-                        <td class="col-md-4">
-    <code>start()</code>
-                        </td>
-                    </tr>
-    
-                    <tr>
-                        <td class="col-md-4">
-                                <div class="io-description">
-                                    <b>Returns: </b>    <code>void</code>
-    
-                                </div>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-            <table class="table table-sm table-bordered">
-                <tbody>
-                    <tr>
-                        <td class="col-md-4">
-                            <b> pause</b>
-                        </td>
-                    </tr>
-    
-                    <tr>
-                        <td class="col-md-4">
-    <code>pause()</code>
-                        </td>
-                    </tr>
-    
-                    <tr>
-                        <td class="col-md-4">
-                                <div class="io-description">
-                                    <b>Returns: </b>    <code>void</code>
-    
-                                </div>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-            <table class="table table-sm table-bordered">
-                <tbody>
-                    <tr>
-                        <td class="col-md-4">
-                            <b> stop</b>
-                        </td>
-                    </tr>
-    
-                    <tr>
-                        <td class="col-md-4">
-    <code>stop()</code>
-                        </td>
-                    </tr>
-    
-                    <tr>
-                        <td class="col-md-4">
-                                <div class="io-description">
-                                    <b>Returns: </b>    <code>void</code>
-    
-                                </div>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-            <table class="table table-sm table-bordered">
-                <tbody>
-                    <tr>
-                        <td class="col-md-4">
                             <b><span class="modifier">Private</span> startTimer</b>
                         </td>
                     </tr>
@@ -529,6 +457,51 @@
                 <tbody>
                     <tr>
                         <td class="col-md-4">
+                            <b> pause</b>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <code>pause:     <code>() &#x3D;&gt; void</code>
+    </bcode>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <b> start</b>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <code>start:     <code>() &#x3D;&gt; void</code>
+    </bcode>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <b> stop</b>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <code>stop:     <code>() &#x3D;&gt; void</code>
+    </bcode>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
                             <b><span class="modifier">Private</span> subscription</b>
                         </td>
                     </tr>
@@ -596,33 +569,33 @@ export class NgTimerComponent implements OnInit {
     this.start();
   }
 
-  start(): void {
+  start &#x3D; () &#x3D;&gt; {
     this.isPaused &#x3D; false;
     this.startTimer();
-  }
+  };
 
-  pause(): void {
+  pause &#x3D; () &#x3D;&gt; {
     this.isPaused &#x3D; true;
     this.stopTimer();
-  }
+  };
 
-  stop(): void {
+  stop &#x3D; () &#x3D;&gt; {
     this.isPaused &#x3D; true;
     this.value &#x3D; this.init;
     this.stopTimer();
-  }
+  };
 
-  get isStoppable(): boolean {
+  get isStoppable() {
     return this.init !&#x3D;&#x3D; this.value;
   }
 
-  private startTimer(): void {
+  private startTimer() {
     this.subscription &#x3D; interval(this.interval).subscribe((_) &#x3D;&gt; {
       this.value++;
     });
   }
 
-  private stopTimer(): void {
+  private stopTimer() {
     if (this.subscription) {
       this.subscription.unsubscribe();
     }

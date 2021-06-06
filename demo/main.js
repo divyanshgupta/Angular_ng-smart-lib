@@ -530,23 +530,23 @@ class NgTimerComponent {
         this.init = 0;
         this.interval = 1000;
         this.isPaused = true;
+        this.start = () => {
+            this.isPaused = false;
+            this.startTimer();
+        };
+        this.pause = () => {
+            this.isPaused = true;
+            this.stopTimer();
+        };
+        this.stop = () => {
+            this.isPaused = true;
+            this.value = this.init;
+            this.stopTimer();
+        };
     }
     ngOnInit() {
         this.value = this.init;
         this.start();
-    }
-    start() {
-        this.isPaused = false;
-        this.startTimer();
-    }
-    pause() {
-        this.isPaused = true;
-        this.stopTimer();
-    }
-    stop() {
-        this.isPaused = true;
-        this.value = this.init;
-        this.stopTimer();
     }
     get isStoppable() {
         return this.init !== this.value;
