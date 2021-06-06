@@ -83,6 +83,12 @@
                                     <a href="../components/NgAlertComponent.html" >NgAlertComponent</a>
                                 </li>
                                 <li class="link">
+                                    <a href="../components/NgCategorySelectorComponent.html" >NgCategorySelectorComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/NgCategorySetComponent.html" >NgCategorySetComponent</a>
+                                </li>
+                                <li class="link">
                                     <a href="../components/NgTimerComponent.html" >NgTimerComponent</a>
                                 </li>
                         </ul>
@@ -122,10 +128,16 @@
                                 <li class="link">
                                     <a href="../interfaces/AlertMessage.html" >AlertMessage</a>
                                 </li>
+                                <li class="link">
+                                    <a href="../interfaces/CategoryNode.html" >CategoryNode</a>
+                                </li>
                         </ul>
                     </li>
             
             
+                    <li class="chapter">
+                        <a data-type="chapter-link" href="../miscellaneous.html" ><span class="fa fa-cubes"></span>Miscellaneous</a>
+                    </li>
             
                     <li class="chapter">
                         <a data-type="chapter-link" href="../coverage.html" ><span class="fa fa-tasks"></span>Documentation coverage</a>
@@ -204,6 +216,12 @@
                                            <a href="../components/NgAlertComponent.html" >NgAlertComponent</a>
                                        </li>
                                        <li class="link">
+                                           <a href="../components/NgCategorySelectorComponent.html" >NgCategorySelectorComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/NgCategorySetComponent.html" >NgCategorySetComponent</a>
+                                       </li>
+                                       <li class="link">
                                            <a href="../components/NgTimerComponent.html" >NgTimerComponent</a>
                                        </li>
                                </ul>
@@ -243,10 +261,16 @@
                                        <li class="link">
                                            <a href="../interfaces/AlertMessage.html" >AlertMessage</a>
                                        </li>
+                                       <li class="link">
+                                           <a href="../interfaces/CategoryNode.html" >CategoryNode</a>
+                                       </li>
                                </ul>
                            </li>
                    
                    
+                           <li class="chapter">
+                               <a data-type="chapter-link" href="../miscellaneous.html" ><span class="fa fa-cubes"></span>Miscellaneous</a>
+                           </li>
                    
                            <li class="chapter">
                                <a data-type="chapter-link" href="../coverage.html" ><span class="fa fa-tasks"></span>Documentation coverage</a>
@@ -308,6 +332,12 @@
                             <li class="list-group-item">
                                 <a href="../components/NgTimerComponent.html">NgTimerComponent</a>
                             </li>
+                            <li class="list-group-item">
+                                <a href="../components/NgCategorySelectorComponent.html">NgCategorySelectorComponent</a>
+                            </li>
+                            <li class="list-group-item">
+                                <a href="../components/NgCategorySetComponent.html">NgCategorySetComponent</a>
+                            </li>
                     </ul>
                 </div>
                 <div class="col-sm-3">
@@ -319,6 +349,12 @@
                             <li class="list-group-item">
                                     <a href="../components/NgTimerComponent.html" >NgTimerComponent</a>
                             </li>
+                            <li class="list-group-item">
+                                    <a href="../components/NgCategorySelectorComponent.html" >NgCategorySelectorComponent</a>
+                            </li>
+                            <li class="list-group-item">
+                                    <a href="../components/NgCategorySetComponent.html" >NgCategorySetComponent</a>
+                            </li>
                     </ul>
                 </div>
             </div>
@@ -329,11 +365,13 @@
 import { NgAlertComponent } from &#x27;./components/alert/alert.component&#x27;;
 import { CommonModule } from &#x27;@angular/common&#x27;;
 import { NgTimerComponent } from &#x27;./components/timer/timer.component&#x27;;
+import { NgCategorySelectorComponent } from &#x27;./components/category-selector/category-selector.component&#x27;;
+import { NgCategorySetComponent } from &#x27;./components/category-selector/category-set/category-set.component&#x27;;
 
 @NgModule({
-  declarations: [NgAlertComponent, NgTimerComponent],
+  declarations: [NgAlertComponent, NgTimerComponent, NgCategorySelectorComponent, NgCategorySetComponent],
   imports: [CommonModule],
-  exports: [NgAlertComponent, NgTimerComponent],
+  exports: [NgAlertComponent, NgTimerComponent, NgCategorySelectorComponent, NgCategorySetComponent],
 })
 export class NgSmartLibModule {}
 </code></pre>

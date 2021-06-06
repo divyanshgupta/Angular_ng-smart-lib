@@ -80,13 +80,13 @@
                                 id="xs-components-links"
                             >
                                 <li class="link">
-                                    <a href="../components/NgAlertComponent.html"  class="active" >NgAlertComponent</a>
+                                    <a href="../components/NgAlertComponent.html" >NgAlertComponent</a>
                                 </li>
                                 <li class="link">
                                     <a href="../components/NgCategorySelectorComponent.html" >NgCategorySelectorComponent</a>
                                 </li>
                                 <li class="link">
-                                    <a href="../components/NgCategorySetComponent.html" >NgCategorySetComponent</a>
+                                    <a href="../components/NgCategorySetComponent.html"  class="active" >NgCategorySetComponent</a>
                                 </li>
                                 <li class="link">
                                     <a href="../components/NgTimerComponent.html" >NgTimerComponent</a>
@@ -213,13 +213,13 @@
                                        id="components-links"
                    >
                                        <li class="link">
-                                           <a href="../components/NgAlertComponent.html"  class="active" >NgAlertComponent</a>
+                                           <a href="../components/NgAlertComponent.html" >NgAlertComponent</a>
                                        </li>
                                        <li class="link">
                                            <a href="../components/NgCategorySelectorComponent.html" >NgCategorySelectorComponent</a>
                                        </li>
                                        <li class="link">
-                                           <a href="../components/NgCategorySetComponent.html" >NgCategorySetComponent</a>
+                                           <a href="../components/NgCategorySetComponent.html"  class="active" >NgCategorySetComponent</a>
                                        </li>
                                        <li class="link">
                                            <a href="../components/NgTimerComponent.html" >NgTimerComponent</a>
@@ -287,7 +287,7 @@
 
 <ol class="breadcrumb">
   <li>Components</li>
-  <li>NgAlertComponent</li>
+  <li>NgCategorySetComponent</li>
 </ol>
 
 
@@ -305,7 +305,7 @@
     <h3>File</h3>
 </p>
 <p class="comment">
-    <code>projects/ng-smart-lib/src/lib/components/alert/alert.component.ts</code>
+    <code>projects/ng-smart-lib/src/lib/components/category-selector/category-set/category-set.component.ts</code>
 </p>
 
 
@@ -328,27 +328,72 @@
 
             <tr>
                 <td class="col-md-3">selector</td>
-                <td class="col-md-9"><code>lib-ng-alert</code></td>
+                <td class="col-md-9"><code>lib-category-set</code></td>
             </tr>
 
             <tr>
                 <td class="col-md-3">styleUrls</td>
-                <td class="col-md-9"><code>alert.component.css</code></td>
+                <td class="col-md-9"><code>category-set.component.css</code></td>
             </tr>
+
 
 
             <tr>
-                <td class="col-md-3">template</td>
-                <td class="col-md-9"><code>&lt;div&nbsp;class&#x3D;&quot;alert&quot;&nbsp;*ngIf&#x3D;&quot;alertMessage$&nbsp;|&nbsp;async&nbsp;as&nbsp;alertMessage&quot;&nbsp;[ngStyle]&#x3D;&quot;{&nbsp;background:&nbsp;alertMessage.color&nbsp;}&quot;&gt;<br>&nbsp;&nbsp;&lt;span&nbsp;class&#x3D;&quot;closebtn&quot;&nbsp;(click)&#x3D;&quot;closeAlert()&quot;&gt;&amp;times;&lt;/span&gt;<br>&nbsp;&nbsp;&lt;strong&gt;{{&nbsp;alertMessage.prefix&nbsp;}}!&lt;/strong&gt;&nbsp;{{&nbsp;alertMessage.message&nbsp;}}<br>&lt;/div&gt;<br></code></td>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>category-set.component.html</code></td>
             </tr>
-
 
 
         </tbody>
     </table>
 </section>
 
+    <section>
+        <h3 id="inputs">Inputs</h3>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-2">
+                            <code>data</code>
+                        </td>
+                        <td class="col-md-10">
+                              <p>
+                                <em>Type:</em>    <code>CategoryNode[]</code>
 
+                              </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-2">
+                            <code>selected</code>
+                        </td>
+                        <td class="col-md-10">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+    </section>
+
+    <section>
+        <h3 id="outputs">Outputs</h3>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-2">
+                            <code>selection</code>
+                        </td>
+                        <td class="col-md-10">
+                            <em><code>$event</code> type:</em>    <code>EventEmitter&lt;CategoryNode&gt;</code>
+
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+    </section>
 
     <section>
         <h3 id="constructor">Constructor</h3>
@@ -356,7 +401,7 @@
                 <tbody>
                     <tr>
                         <td class="col-md-4">
-                            <code>constructor(alertService: <a href="../injectables/NgAlertService.html" >NgAlertService</a>)</code>
+                            <code>constructor(resolver: <a href="https://angular.io/docs/ts/latest/api/core/index/ComponentFactoryResolver-class.html" target="_blank" >ComponentFactoryResolver</a>)</code>
                         </td>
                     </tr>
     
@@ -370,13 +415,109 @@
                 <tbody>
                     <tr>
                         <td class="col-md-4">
-                            <b> closeAlert</b>
+                            <b> clickChip</b>
                         </td>
                     </tr>
     
                     <tr>
                         <td class="col-md-4">
-    <code>closeAlert()</code>
+    <code>clickChip(_: any, category: any, preselection: any[])</code>
+                        </td>
+                    </tr>
+    
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-description">
+                                    <b>Returns: </b>    <code>void</code>
+    
+                                </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <b> removeChild</b>
+                        </td>
+                    </tr>
+    
+                    <tr>
+                        <td class="col-md-4">
+    <code>removeChild()</code>
+                        </td>
+                    </tr>
+    
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-description">
+                                    <b>Returns: </b>    <code>void</code>
+    
+                                </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <b> trackByFn</b>
+                        </td>
+                    </tr>
+    
+                    <tr>
+                        <td class="col-md-4">
+    <code>trackByFn(item: CategoryNode)</code>
+                        </td>
+                    </tr>
+    
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-description">
+                                    <b>Returns: </b>    <code>string | number</code>
+    
+                                </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <b> insertChild</b>
+                        </td>
+                    </tr>
+    
+                    <tr>
+                        <td class="col-md-4">
+    <code>insertChild(preselection: any[])</code>
+                        </td>
+                    </tr>
+    
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-description">
+                                    <b>Returns: </b>    <code>void</code>
+    
+                                </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <b> emitSelection</b>
+                        </td>
+                    </tr>
+    
+                    <tr>
+                        <td class="col-md-4">
+    <code>emitSelection(category: CategoryNode)</code>
                         </td>
                     </tr>
     
@@ -398,12 +539,12 @@
                 <tbody>
                     <tr>
                         <td class="col-md-4">
-                            <b> alertMessage$</b>
+                            <b><span class="modifier">Private</span> preselectionSubject</b>
                         </td>
                     </tr>
                     <tr>
                         <td class="col-md-4">
-                            <code>alertMessage$:     <code>Observable&lt;boolean | AlertMessage&gt;</code>
+                            <span class="modifier-icon fa fa-lock"></span><code>preselectionSubject:     <code>BehaviorSubject&lt;any[]&gt;</code>
     </bcode>
                         </td>
                     </tr>
@@ -413,12 +554,27 @@
                 <tbody>
                     <tr>
                         <td class="col-md-4">
-                            <b> close$</b>
+                            <b> selectedCategory</b>
                         </td>
                     </tr>
                     <tr>
                         <td class="col-md-4">
-                            <code>close$:     <code>Subject&lt;boolean&gt;</code>
+                            <code>selectedCategory:     <code>CategoryNode</code>
+    </bcode>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <b> vc</b>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <code>vc:     <code><a href="https://angular.io/docs/ts/latest/api/core/index/ViewContainerRef-class.html" target="_blank" >ViewContainerRef</a></code>
     </bcode>
                         </td>
                     </tr>
@@ -427,32 +583,88 @@
     </section>
 </div>
         <div class="tab-pane fade tab-source-code" id="source">
-            <pre><code class="hljs javascript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
-import { merge, Observable, Subject } from &#x27;rxjs&#x27;;
-import { AlertMessage, NgAlertService } from &#x27;./ng-alert-service&#x27;;
+            <pre><code class="hljs javascript">import {
+  Component,
+  ComponentFactoryResolver,
+  ContentChild,
+  EventEmitter,
+  Input,
+  OnInit,
+  Output,
+  TemplateRef,
+  ViewChild,
+  ViewContainerRef,
+} from &#x27;@angular/core&#x27;;
+import { BehaviorSubject, interval, merge, Observable, Subject, Subscription } from &#x27;rxjs&#x27;;
+import { CategoryNode } from &#x27;../category-selector.component&#x27;;
 
 @Component({
-  selector: &#x27;lib-ng-alert&#x27;,
-  template: &#x60;
-    &lt;div class&#x3D;&quot;alert&quot; *ngIf&#x3D;&quot;alertMessage$ | async as alertMessage&quot; [ngStyle]&#x3D;&quot;{ background: alertMessage.color }&quot;&gt;
-      &lt;span class&#x3D;&quot;closebtn&quot; (click)&#x3D;&quot;closeAlert()&quot;&gt;&amp;times;&lt;/span&gt;
-      &lt;strong&gt;{{ alertMessage.prefix }}!&lt;/strong&gt; {{ alertMessage.message }}
-    &lt;/div&gt;
-  &#x60;,
-  styleUrls: [&#x27;./alert.component.css&#x27;],
+  selector: &#x27;lib-category-set&#x27;,
+  templateUrl: &#x27;./category-set.component.html&#x27;,
+  styleUrls: [&#x27;./category-set.component.css&#x27;],
 })
-export class NgAlertComponent implements OnInit {
-  alertMessage$: Observable&lt;AlertMessage | boolean&gt;;
-  close$ &#x3D; new Subject&lt;boolean&gt;();
-
-  constructor(private alertService: NgAlertService) {}
-
-  ngOnInit(): void {
-    this.alertMessage$ &#x3D; merge(this.alertService.alertMessage$, this.close$);
+export class NgCategorySetComponent implements OnInit {
+  @Input() data: CategoryNode[];
+  private preselectionSubject &#x3D; new BehaviorSubject&lt;any[]&gt;([]);
+  @Input()
+  set selected(value: (string | number)[]) {
+    this.preselectionSubject.next(value);
   }
+  @ViewChild(&#x27;vc&#x27;, { read: ViewContainerRef }) vc: ViewContainerRef;
+  selectedCategory: CategoryNode;
+  @Output() selection: EventEmitter&lt;CategoryNode&gt; &#x3D; new EventEmitter();
+  constructor(private resolver: ComponentFactoryResolver) {}
+  ngOnInit(): void {
+    this.preselectionSubject.subscribe((newValue) &#x3D;&gt; {
+      if (newValue &#x3D;&#x3D;&#x3D; null) {
+        this.selectedCategory &#x3D; null;
+        this.removeChild();
+      }
 
-  closeAlert(): void {
-    this.close$.next();
+      if (this.data &amp;&amp; newValue) {
+        newValue.forEach((nodeID) &#x3D;&gt; {
+          this.data.forEach((node) &#x3D;&gt; {
+            if (node.id &#x3D;&#x3D;&#x3D; nodeID) {
+              this.clickChip(null, node, newValue);
+            }
+          });
+        });
+      }
+    });
+  }
+  clickChip(_, category, preselection: any[]): void {
+    this.removeChild();
+    if (preselection || preselection &#x3D;&#x3D;&#x3D; null) {
+      this.selectedCategory &#x3D; category;
+    } else {
+      this.selectedCategory &#x3D; this.selectedCategory &amp;&amp; this.selectedCategory.id &#x3D;&#x3D;&#x3D; category.id ? null : category;
+      this.selection.emit(this.selectedCategory);
+    }
+
+    this.insertChild(preselection);
+  }
+  removeChild(): void {
+    this.vc.clear();
+  }
+  trackByFn(item: CategoryNode): string | number {
+    return item.id;
+  }
+  insertChild(preselection: any[]): void {
+    if (this.selectedCategory &amp;&amp; this.selectedCategory.children.length) {
+      const compFactory &#x3D; this.resolver.resolveComponentFactory(NgCategorySetComponent);
+
+      const component &#x3D; this.vc.createComponent(compFactory);
+      component.instance.data &#x3D; this.selectedCategory.children;
+      component.instance.selected &#x3D; preselection;
+      component.instance.selection.subscribe((event) &#x3D;&gt; this.emitSelection(event));
+    }
+  }
+  emitSelection(category: CategoryNode | null): void {
+    if (category) {
+      this.selection.emit(category);
+    } else {
+      this.selection.emit(this.selectedCategory);
+    }
   }
 }
 </code></pre>
